@@ -463,6 +463,7 @@ class DagsterApiServer(DagsterApiServicer):
 
     def StreamingExternalRepository(self, request, _context):
         serialized_external_repository_data = self._get_serialized_external_repository_data(request)
+        print(f"!!! serialized_external_repository_data={repr(serialized_external_repository_data)}")
 
         num_chunks = int(
             math.ceil(
